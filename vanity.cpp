@@ -48,12 +48,12 @@ void check_passphrase(const std::string& start_pattern, const std::string& end_p
 
         // uncomment this if you want random passphrase
 
-        /*
+        
         data_chunk my_entropy(32);
         pseudo_random_fill(my_entropy);
         wallet::word_list mnemonic_words = wallet::create_mnemonic(my_entropy);
         passphrase = join(mnemonic_words); 
-        */
+        
 
         if ((i % 100000) == 0) {
 
@@ -147,7 +147,7 @@ int main()
     std::string start_pattern = "beginofyourpassphrase";
     std::string end_pattern   = "endofyourpassphrase";
 
-    check_passphrase(start_pattern, end_pattern, "komod");
+    check_passphrase(start_pattern, end_pattern, "GcG");
 
     return 0;
 }
