@@ -26,6 +26,16 @@ size_t findCaseInsensitive(std::string data, std::string toSearch, size_t pos = 
 	return data.find(toSearch, pos);
 }
 
+size_t findCaseSensitive(std::string data, std::string toSearch, size_t pos = 0)
+{
+	// Convert complete given String to lower case
+	//std::transform(data.begin(), data.end(), data.begin(), ::tolower);
+	// Convert complete given Sub String to lower case
+	//std::transform(toSearch.begin(), toSearch.end(), toSearch.begin(), ::tolower);
+	// Find sub string in given string
+	return data.find(toSearch, pos);
+}
+
 void check_passphrase(const std::string& start_pattern, const std::string& end_pattern, const std::string& find_pattern) {
 
     std::string passphrase;
@@ -118,7 +128,7 @@ void check_passphrase(const std::string& start_pattern, const std::string& end_p
             cout << "KMD: " << kmd_addr << endl;
         }
 
-        size_t pos = findCaseInsensitive(kmd_addr, find_pattern);
+        size_t pos = findCaseSensitive(kmd_addr, find_pattern);
         if( pos != std::string::npos)
         {
             // cout << "KMD: " << kmd_addr << "\tPassphrase: '" << passphrase << "'" << endl;

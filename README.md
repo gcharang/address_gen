@@ -1,3 +1,21 @@
+## For Vanitygen
+
+Change: https://github.com/gcharang/address_gen/blob/master/vanity.cpp#L150
+
+```bash
+sudo apt install build-essential libtool autotools-dev automake pkg-config
+sudo apt install git
+sudo apt install libboost-dev
+sudo apt install libboost-chrono-dev libboost-system-dev libboost-thread-dev libboost-regex-dev libboost-program-options-dev libboost-log-dev libboost-locale-dev libboost-iostreams-dev libboost-filesystem-dev libboost-date-time-dev libboost-test-dev
+sudo apt install libgmp-dev
+```
+
+```bash
+./build_deps.sh
+./build_vanity.sh
+./vanity
+```
+
 ## Passphrase2Address GUI
 
 This is simple Qt app for generate addresses and WIFs for various coins from Agama passphrase. It's used [libbitcoin](https://github.com/libbitcoin/libbitcoin) for address generation and required following deps:
