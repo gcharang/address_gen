@@ -1,6 +1,6 @@
 ## For Vanitygen
 
-Change: https://github.com/gcharang/address_gen/blob/master/vanity.cpp#L150
+Change: https://github.com/gcharang/address_gen/blob/master/vanity.cpp#L160
 
 ```bash
 sudo apt install build-essential libtool autotools-dev automake pkg-config
@@ -11,7 +11,7 @@ sudo apt install libgmp-dev
 ```
 
 ```bash
-./build_deps.sh
+sudo ./install.sh --build-boost --disable-shared
 ./build_vanity.sh
 ./vanity
 ```

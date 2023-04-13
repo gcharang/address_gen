@@ -7,7 +7,7 @@
 /* Vanity Passphrase Example by Decker (q) 2019 */
 
 using namespace std;
-using namespace libbitcoin::system;
+using namespace libbitcoin;
 
 /*
     https://github.com/libbitcoin/libbitcoin-system/wiki/Examples-from-Serialised-Data
