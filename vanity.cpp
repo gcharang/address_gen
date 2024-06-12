@@ -129,7 +129,9 @@ void check_passphrase(const std::string& start_pattern, const std::string& end_p
         }
 
         size_t pos = findCaseSensitive(kmd_addr, find_pattern);
-        if( pos != std::string::npos)
+
+        //if( pos != std::string::npos)
+        if( pos == 1)
         {
             // cout << "KMD: " << kmd_addr << "\tPassphrase: '" << passphrase << "'" << endl;
             cout << "KMD: " << kmd_addr.substr(0,pos) << "\x1B[33m" << kmd_addr.substr(pos, find_pattern.size()) << "\033[0m" << kmd_addr.substr(pos + find_pattern.size()) << "\tPassphrase: '" << passphrase << "'" << endl;
